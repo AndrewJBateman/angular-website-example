@@ -1,27 +1,66 @@
-# WebsitePractise
+# Angular Website Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+* Convert html template to Angular 6.
 
-## Development server
+*** Note: to open web links in a new window use: _ctrl+click on link_**
+
+## Table of contents
+
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
+
+## General info
+
+* Youtube videos - convert html template to angular website - follow 16 parts.
+
+## Screenshots
+
+![Example screenshot](./img/.png).
+
+## Technologies
+
+* [Angular v7.2.13](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+
+* [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+
+* [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
+
+## Setup
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Code Examples
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* `to follow`
 
-## Build
+```typescript
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+to follow
 
-## Running unit tests
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Features
 
-## Running end-to-end tests
+* to follow
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Status & To-Do List
 
-## Further help
+* Status: compiles and displays in browser.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* To-Do: Update to ng7. complete Youtube videos.
+
+## Inspiration
+
+* [Create your first website using angular 6 -- Part 1 -- HTML Template to Angular Component](https://www.youtube.com/watch?v=LYmJOdCuXrs&list=UUcfCHgDDBw65jdnd9DTKwgg&index=19)
+
+* [One Page Love website of html templates](https://onepagelove.com/namari)
+
+## Contact
+
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
