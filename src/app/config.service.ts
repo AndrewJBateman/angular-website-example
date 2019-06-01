@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { configuration } from "./configuration";
+import { Injectable } from '@angular/core';
+import { configuration } from './configuration';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class ConfigService {
   config = configuration;

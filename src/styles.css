@@ -1,6 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-/* Namari Landing Page v.1.1.0 Style Index - a free landing page by shapingrain.com
 
+/*
 1. Default and Reset styles
 - 1.1 Input Elements
 2. Global elements
@@ -781,8 +780,13 @@ h6 {
 /*------------------------------------------------------------------------------------------*/
 
 #banner {
-    background-size: cover;
+  background: url("assets/images/banner-images/banner-image-1.jpg") no-repeat center top;
+  background-size: cover;
 }
+
+/* #banner {
+    background-size: cover;
+} */
 
 #banner-content.row {
     padding-top: 170px;
@@ -1396,7 +1400,7 @@ blockquote {
     padding: 15px 25px;
 }
 
-.client-overlay {
+/* .client-overlay {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
@@ -1410,7 +1414,7 @@ blockquote {
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-}
+} */
 
 #clients a:hover .client-overlay {
     opacity: 1;
@@ -2389,7 +2393,7 @@ a:hover, #header.nav-solid nav a:hover {
 }
 
 
-/* Navigation Colors when the Navigation is sticky and solid */ 
+/* Navigation Colors when the Navigation is sticky and solid */
 
 #header.nav-solid, #header.nav-solid a, #header.nav-solid i, #nav-mobile ul li a {
     color:#333;
@@ -2401,7 +2405,7 @@ a:hover, #header.nav-solid nav a:hover {
 #header.nav-solid .active {
     color: #d2b356;
     border-color: #d2b356;
-}    
+}
 
 
 
@@ -2417,7 +2421,7 @@ a:hover, #header.nav-solid nav a:hover {
 }
 
 .primary-color, .primary-color .section-title, .primary-color .section-subtitle, .featured .pricing, .featured .pricing p {
-    color:#fff;    
+    color:#fff;
 }
 
 .section-heading h2:after {
@@ -2476,14 +2480,14 @@ body {
 
 #logo h1 {
     font-family:;
-    font-size:; 
+    font-size:;
     font-weight:;
     color:;
 }
 
 #logo h2 {
     font-family:;
-    font-size:; 
+    font-size:;
     font-weight:;
     color:;
 }
@@ -2513,7 +2517,7 @@ body {
 
 .section-title {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 34px; 
+    font-size: 34px;
     font-weight:700;
     color:#111;
 }
@@ -2529,7 +2533,7 @@ body {
 
 .testimonial q {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 17px; 
+    font-size: 17px;
     font-weight:300;
 }
 
@@ -2542,42 +2546,42 @@ body {
 
 h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 40px; 
+    font-size: 40px;
     font-weight:300;
     color:#111;
 }
 
 h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 34px; 
+    font-size: 34px;
     font-weight:300;
     color:#111;
 }
 
 h3 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 30px; 
+    font-size: 30px;
     font-weight:700;
     color:#111;
 }
 
 h4 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 18px; 
+    font-size: 18px;
     font-weight:400;
     color:#111;
 }
 
 h5 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight:400;
     color:#111;
 }
 
 h6 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 14px; 
+    font-size: 14px;
     font-weight:400;
     color:#111;
 }

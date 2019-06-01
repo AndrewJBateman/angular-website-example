@@ -25,9 +25,11 @@
 
 ## Technologies
 
-* [Angular v7.2.13](https://angular.io/) & [Angular CLI v7.3.8](https://cli.angular.io/).
+* [Angular v8.0.0](https://angular.io/)
 
-* [RxJS Library v6.4.0](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+* [Angular CLI v8.0.1](https://cli.angular.io/).
+
+* [RxJS Library v6.5.2](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
 
@@ -47,17 +49,21 @@ to follow
 
 ## Features
 
-* to follow
+* Updated to Angular 8.
 
 ## Status & To-Do List
 
 * Status: compiles and displays in browser.
 
-* To-Do: Update to ng7. complete Youtube videos.
+* To-Do: complete Youtube videos.
 
 ## Inspiration
 
 * [Create your first website using angular 6 -- Part 1 -- HTML Template to Angular Component](https://www.youtube.com/watch?v=LYmJOdCuXrs&list=UUcfCHgDDBw65jdnd9DTKwgg&index=19)
+
+* [Create your first website using angular 6 -- Part 2-- Routing and Static data to configuration file](https://www.youtube.com/watch?v=JAb0vvr6foU)
+
+* [Create your first website using angular 6 -- Part 3 -- Configuration File](https://www.youtube.com/watch?v=qBjn8TrXyPY)
 
 * [One Page Love website of html templates](https://onepagelove.com/namari)
 
