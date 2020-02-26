@@ -1,6 +1,6 @@
 # Angular Website Example
 
-* Convert html template to Angular 6.
+* Convert html template to Angular 9.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -21,15 +21,13 @@
 
 ## Screenshots
 
-![Example screenshot](./img/.png).
+![Example screenshot](./img/home.png).
 
 ## Technologies
 
-* [Angular v8.0.0](https://angular.io/)
+* [Angular v9.0.1](https://angular.io/)
 
-* [Angular CLI v8.0.1](https://cli.angular.io/).
-
-* [RxJS Library v6.5.2](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+* [RxJS Library v6.5.4](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
 
@@ -49,13 +47,13 @@ to follow
 
 ## Features
 
-* Updated to Angular 8.
+* Updated to Angular 9.
 
 ## Status & To-Do List
 
 * Status: compiles and displays in browser.
 
-* To-Do: complete Youtube videos.
+* To-Do: Fix border issue in css global styling. Complete Youtube videos.
 
 ## Inspiration
 
