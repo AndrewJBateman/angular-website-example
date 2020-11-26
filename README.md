@@ -1,6 +1,7 @@
 # :zap: Angular Website Example
 
-* Converts a (free) html template to Angular 10.
+* Converts a (free) html template to Angular 11.
+* Tutorial code from [AdMISTER STUDIOs](https://www.youtube.com/c/AdMISTERSTUDIOs/featured) - see [:clap: Inspiration](#clap-inspiration) below.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -28,13 +29,15 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v10](https://angular.io/)
+* [Angular v11](https://angular.io/)
 * [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
 
 ## :floppy_disk: Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `npm i` to install dependencies.
+* Run `ng serve` for a dev server.
+* Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## :computer: Code Examples
 
@@ -48,11 +51,11 @@ to follow
 
 ## :cool: Features
 
-* Updated to Angular 10.
+* Updated to Angular 11.
 
 ## :clipboard: Status & To-Do List
 
-* Status: All dependencies updated. Compiles and displays in browser.
+* Status: Working but website incomplete. All dependencies updated. Compiles and displays in browser.
 * To-Do: Fix border issue in css global styling. Complete Youtube videos.
 
 ## :clap: Inspiration
