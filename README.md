@@ -1,9 +1,13 @@
 # :zap: Angular Website Example
 
-* Converts a (free) html template to Angular 11.
+* Converts a (free) html template to Angular 11. Do not update to Angular12.
 * Tutorial code from [AdMISTER STUDIOs](https://www.youtube.com/c/AdMISTERSTUDIOs/featured) - see [:clap: Inspiration](#clap-inspiration) below.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-website-example?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-website-example?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-website-example?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-website-example?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -65,6 +69,10 @@ to follow
 * [Create your first website using angular 6 -- Part 3 -- Configuration File](https://www.youtube.com/watch?v=qBjn8TrXyPY)
 * [One Page Love website of html templates](https://onepagelove.com/namari)
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
