@@ -1,6 +1,6 @@
 # :zap: Angular Website Example
 
-* Converts a (free) html template to Angular 11. Do not update to Angular12.
+* Converts a (free) html template to Angular 13
 * Tutorial code from [AdMISTER STUDIOs](https://www.youtube.com/c/AdMISTERSTUDIOs/featured) - see [:clap: Inspiration](#clap-inspiration) below.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
@@ -21,6 +21,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -33,8 +34,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v11](https://angular.io/)
-* [RxJS Library v6](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
+* [Angular v13](https://angular.io/)
+* [RxJS Library v7](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
 
 ## :floppy_disk: Setup
@@ -55,7 +56,7 @@ to follow
 
 ## :cool: Features
 
-* Updated to Angular 11.
+* None
 
 ## :clipboard: Status & To-Do List
 
