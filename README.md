@@ -1,6 +1,6 @@
 # :zap: Angular Website Example
 
-* Converts a (free) html template to Angular 13
+* Converts a (free) HTML template to Angular 13
 * Tutorial code from [AdMISTER STUDIOs](https://www.youtube.com/c/AdMISTERSTUDIOs/featured) - see [:clap: Inspiration](#clap-inspiration) below.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
@@ -26,7 +26,7 @@
 
 ## :books: General info
 
-* Youtube videos - convert html template to angular website - follow 16 parts.
+* Youtube videos - convert HTML template to Angular website - follow 16 parts.
 
 ## :camera: Screenshots
 
@@ -61,7 +61,7 @@ to follow
 ## :clipboard: Status & To-Do List
 
 * Status: Working but website incomplete. All dependencies updated. Compiles and displays in browser.
-* To-Do: Fix border issue in css global styling. Complete Youtube videos.
+* To-Do: Fix border issue in CSS global styling. Complete Youtube videos.
 
 ## :clap: Inspiration
 
