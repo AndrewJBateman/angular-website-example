@@ -1,0 +1,19 @@
+.pagination> li{
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+  padding-top:10px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom:10px;
+  cursor: pointer;
+}
+.pagination> li.active {
+  background-color: #005575;
+}
+
+.pagination> li.disabled {
+  background-color: #ddd;
+  cursor:default;
+}

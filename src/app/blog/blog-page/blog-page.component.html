@@ -1,0 +1,24 @@
+<section id="blog" class="secondary-color text-center scrollto clearfix">
+  <div class="row clearfix" *ngIf="blog">
+    <div class="section-heading">
+      <h3>{{ blog.tagline }}</h3>
+      <h2 class="section-title">{{ blog.title | uppercase }}</h2>
+      <a routerLink="article-create" class="button" id="add-button"
+        ><i class="ion ion-plus"></i
+      ></a>
+    </div>
+    <div
+      *ngFor="let post of pages"
+      class="post-block col-3 wow fadeInUp"
+      data-wow-delay="0.4s"
+    >
+      <app-post-block [post]="post"></app-post-block>
+    </div>
+  </div>
+  <div class="row clearfix">
+    <app-pagination
+      [pager]="pager"
+      (setPage)="setPage($event)"
+    ></app-pagination>
+  </div>
+</section>
