@@ -14,11 +14,11 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 import { ClientsComponent } from './clients/clients.component';
 import { PricingComponent } from './pricing/pricing.component';
-import { HeaderComponent } from './header/header.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
-import { ConfigService } from './config.service';
+import { ConfigService } from './services/config.service';
+import { NavmenuComponent } from './navmenu/navmenu.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +29,9 @@ import { ConfigService } from './config.service';
     FooterComponent,
     ClientsComponent,
     PricingComponent,
-    HeaderComponent,
     SocialComponent,
-    NavigationComponent
+    NavigationComponent,
+    NavmenuComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [ConfigService],

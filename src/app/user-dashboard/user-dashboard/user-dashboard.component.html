@@ -1,0 +1,37 @@
+<section id="pricing" class="secondary-color text-center scrollto clearfix ">
+  <div class="row clearfix">
+
+    <div class="col-3">
+      <div class="panel">
+        <div class="panel-body center">
+            <blockquote class="testimonial classic" >
+                <img src="assets/images/user-images/{{user.image}}" alt="User"/>
+                <q>{{user.bio}}</q>
+                <footer>
+                    <a (click)="logout()" class="button">Sign out</a>
+                </footer>
+            </blockquote>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-2-3">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="pricing-block-content">
+                    <h3>{{user.firstName}} {{user.lastName}}</h3>
+                    <div class="pricing">
+                        <p>{{user.bio}}</p>
+                    </div>
+                    <ul>
+                        <li>{{user.email}}</li>
+                    </ul>
+
+                </div>
+
+            </div>
+          </div>
+    </div>
+
+  </div>
+</section>

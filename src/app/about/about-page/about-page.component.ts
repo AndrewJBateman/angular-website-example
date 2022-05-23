@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ConfigService } from "src/app/config.service";
+import { ConfigService } from "src/app/services/config.service";
 
 @Component({
   selector: "app-about-page",

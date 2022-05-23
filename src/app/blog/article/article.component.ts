@@ -21,7 +21,6 @@ export class ArticleComponent implements OnInit {
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get("id");
     this.getPostById(id);
-    // this.post = this.getPostById(id);
   }
 
   getPostById(id: number) {
