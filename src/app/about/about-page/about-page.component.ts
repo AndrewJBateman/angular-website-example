@@ -32,14 +32,14 @@ export class AboutPageComponent implements OnInit {
   getPageData(database: string, id?: number) {
     this.config.getSettings(database, id).subscribe((data) => {
       this.intro = data;
-      console.log(this.intro);
+      // console.log(this.intro);
     });
   }
 
   getBlockData(database: string) {
     this.config.getSettings(database).subscribe((data) => {
       this.features = data;
-      console.log(this.features);
+      // console.log(this.features);
     });
   }
 }

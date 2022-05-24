@@ -2,29 +2,72 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 
-import { GalleryComponent } from "./gallery/gallery.component";
-import { ContentComponent } from "./content/content.component";
-import { TestimonialsComponent } from "./testimonials/testimonials.component";
-import { ClientsComponent } from "./clients/clients.component";
-import { PricingComponent } from "./pricing/pricing.component";
+import { ContactComponent } from "./contact/contact.component";
+import { LoginComponent } from "./login/login.component";
+import { SignupComponent } from "./signup/signup.component";
+import { SubscribeComponent } from "./subscribe/subscribe.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/Home", pathMatch: "full" },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
   {
-    path: "Home",
+    path: "home",
     loadChildren: () =>
       import("./home/home.module").then((mod) => mod.HomeModule),
   },
+  { path: "login", component: LoginComponent },
+  { path: "signup", component: SignupComponent },
+  { path: "contact", component: ContactComponent, outlet: "popup" },
   {
-    path: "About",
+    path: "about",
     loadChildren: () =>
       import("./about/about.module").then((mod) => mod.AboutModule),
   },
-  { path: "Services", component: ContentComponent },
-  { path: "Testimonials", component: TestimonialsComponent },
-  { path: "Gallery", component: GalleryComponent },
-  { path: "Clients", component: ClientsComponent },
-  { path: "Pricing", component: PricingComponent },
+  {
+    path: "services",
+    loadChildren: () =>
+      import("./services/services.module").then((mod) => mod.ServicesModule),
+  },
+  {
+    path: "testimonials",
+    loadChildren: () =>
+      import("./testimonial/testimonial.module").then(
+        (mod) => mod.TestimonialModule
+      ),
+  },
+  {
+    path: "gallery",
+    loadChildren: () =>
+      import("./gallery/gallery.module").then((mod) => mod.GalleryModule),
+  },
+  {
+    path: "clients",
+    loadChildren: () =>
+      import("./clients/clients.module").then((mod) => mod.ClientsModule),
+  },
+  {
+    path: "pricing",
+    loadChildren: () =>
+      import("./pricing/pricing.module").then((mod) => mod.PricingModule),
+  },
+  { path: "subscribe", component: SubscribeComponent, outlet: "popup" },
+  {
+    path: "dashboard",
+    loadChildren: () =>
+      import("./user-dashboard/user-dashboard.module").then(
+        (mod) => mod.UserDashboardModule
+      ),
+  },
+  {
+    path: "blog",
+    loadChildren: () =>
+      import("./blog/blog.module").then((mod) => mod.BlogModule),
+  },
+  {
+    path: "404",
+    loadChildren: () =>
+      import("./notfound/notfound.module").then((mod) => mod.NotfoundModule),
+  },
+  { path: "**", redirectTo: "/404" },
 ];
 
 @NgModule({

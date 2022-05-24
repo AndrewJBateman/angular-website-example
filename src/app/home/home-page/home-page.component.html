@@ -1,23 +1,25 @@
 <div *ngIf="header">
-  <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5"
-  [style.background]="'url(../assets/images/banner-images/'+ header.image +' ) no-repeat center top;'"
+  <header
+    id="banner"
+    class="scrollto clearfix"
+    data-enllax-ratio=".5"
+    [style.background]="
+      'url(../assets/images/banner-images/' +
+      header.image +
+      ' ) no-repeat center top;'
+    "
   >
-    <!--Banner Content-->
     <div id="banner-content" class="row clearfix">
-
-        <div class="col-38">
-
-            <div class="section-heading">
-                <h1>{{header.tagline}}</h1>
-                <h2>{{header.title}}</h2>
-            </div>
-
-            <!--Call to Action-->
-            <a href="{{header.buttonlink}}" class="button">{{header.description}}</a>
-            <!--End Call to Action-->
-
+      <div class="col-38">
+        <div class="section-heading">
+          <h1>{{ header.tagline }}</h1>
+          <h2>{{ header.title }}</h2>
         </div>
 
-    </div><!--End of Row-->
+        <a href="{{ header.buttonlink }}" class="button">{{
+          header.description
+        }}</a>
+      </div>
+    </div>
   </header>
-  </div>
+</div>

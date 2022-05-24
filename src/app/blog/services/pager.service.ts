@@ -9,7 +9,6 @@ export class PagerService {
   getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10) {
     let totalPages = Math.ceil(totalItems / pageSize);
 
-    // ensure that this do not fall out of bounds
     if (currentPage < 1) {
       currentPage = 1;
     } else if (currentPage > totalPages) {

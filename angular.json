@@ -23,7 +23,20 @@
               "src/styles.css",
               "node_modules/font-awesome/css/font-awesome.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/marked/lib/marked.cjs",
+              "node_modules/wowjs/dist/wow.js",
+              "src/assets/js/jquery.1.8.3.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/featherlight.min.js",
+              "src/assets/js/featherlight.gallery.min.js",
+              "src/assets/js/jquery.enllax.min.js",
+              "src/assets/js/jquery.scrollUp.min.js",
+              "src/assets/js/jquery.easing.min.js",
+              "src/assets/js/jquery.stickyNavbar.min.js",
+              "src/assets/js/images-loaded.min.js",
+              "src/assets/js/lightbox.min.js"
+            ],
             "aot": false,
             "vendorChunk": true,
             "extractLicenses": false,
