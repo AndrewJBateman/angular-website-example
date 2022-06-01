@@ -1,5 +1,6 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from "@angular/core";
-import { ConfigService } from "src/app/services/config.service";
+import { ConfigService } from "src/app/shared/services/config.service";
 
 @Component({
   selector: "app-about-page",
@@ -7,13 +8,14 @@ import { ConfigService } from "src/app/services/config.service";
   styleUrls: ["./about-page.component.css"],
 })
 export class AboutPageComponent implements OnInit {
-  intro: {
-    id: number;
-    name: string;
-    tagline: string;
-    title: string;
-    description: string;
-  }[];
+  // intro: {
+  //   id: number;
+  //   name: string;
+  //   tagline: string;
+  //   title: string;
+  //   description: string;
+  // }[];
+  intro$: Observable<any> = new Observable();
 
   features: {
     id: number;
@@ -29,17 +31,14 @@ export class AboutPageComponent implements OnInit {
     this.getBlockData("features");
   }
 
-  getPageData(database: string, id?: number) {
-    this.config.getSettings(database, id).subscribe((data) => {
-      this.intro = data;
-      // console.log(this.intro);
-    });
+  getPageData(database: string, id?: number): void {
+    this.intro$ = this.config.getSettings(database, id);
   }
 
   getBlockData(database: string) {
     this.config.getSettings(database).subscribe((data) => {
       this.features = data;
-      // console.log(this.features);
+      console.log("features: ", this.features);
     });
   }
 }

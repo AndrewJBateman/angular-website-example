@@ -1,5 +1,8 @@
+import { Observable } from "rxjs";
 import { Component, OnInit } from "@angular/core";
-import { ConfigService } from "../services/config.service";
+
+import { ConfigService } from "../shared/services/config.service";
+import { IFooter } from "./footer";
 
 @Component({
   selector: "app-footer",
@@ -7,24 +10,15 @@ import { ConfigService } from "../services/config.service";
   styleUrls: ["./footer.component.css"],
 })
 export class FooterComponent implements OnInit {
-  footer: {
-    id: number;
-    name: string;
-    tagline: string;
-    title: string;
-    description: string;
-  }[];
-
+  // footer$: Observable<IFooter> = new Observable<IFooter>();
+  footer$: Observable<any> = new Observable();
   constructor(private config: ConfigService) {}
 
   ngOnInit() {
     this.getPageData("pages", 7);
   }
 
-  getPageData(database: string, id?: number) {
-    this.config.getSettings(database, id).subscribe((data) => {
-      this.footer = data;
-      console.log(this.footer);
-    });
+  getPageData(database: string, id?: number): void {
+    this.footer$ = this.config.getSettings(database, id);
   }
 }

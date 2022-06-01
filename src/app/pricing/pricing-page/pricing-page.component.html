@@ -1,1 +1,12 @@
-<p>pricing-page works!</p>
+<section id="pricing" class="secondary-color text-center scrollto clearfix">
+  <div class="row clearfix">
+    <div class="section-heading" *ngIf="pricing$ | async as pricing">
+      <h3>{{ pricing.tagline }}</h3>
+      <h2 class="section-title">{{ pricing.title }}</h2>
+    </div>
+
+    <div *ngFor="let plan of plans$ | async; let i = index">
+      <app-pricing-block [plan]="plan"></app-pricing-block>
+    </div>
+  </div>
+</section>

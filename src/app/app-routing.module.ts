@@ -2,21 +2,13 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 
-import { ContactComponent } from "./contact/contact.component";
-import { LoginComponent } from "./login/login.component";
-import { SignupComponent } from "./signup/signup.component";
-import { SubscribeComponent } from "./subscribe/subscribe.component";
-
 const routes: Routes = [
-  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "", redirectTo: "home", pathMatch: "full" },
   {
     path: "home",
     loadChildren: () =>
       import("./home/home.module").then((mod) => mod.HomeModule),
   },
-  { path: "login", component: LoginComponent },
-  { path: "signup", component: SignupComponent },
-  { path: "contact", component: ContactComponent, outlet: "popup" },
   {
     path: "about",
     loadChildren: () =>
@@ -48,19 +40,6 @@ const routes: Routes = [
     path: "pricing",
     loadChildren: () =>
       import("./pricing/pricing.module").then((mod) => mod.PricingModule),
-  },
-  { path: "subscribe", component: SubscribeComponent, outlet: "popup" },
-  {
-    path: "dashboard",
-    loadChildren: () =>
-      import("./user-dashboard/user-dashboard.module").then(
-        (mod) => mod.UserDashboardModule
-      ),
-  },
-  {
-    path: "blog",
-    loadChildren: () =>
-      import("./blog/blog.module").then((mod) => mod.BlogModule),
   },
   {
     path: "404",

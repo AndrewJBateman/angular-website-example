@@ -1,1 +1,20 @@
-<p>pricing-block works!</p>
+<!--Pricing Block-->
+<div class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s"  [class.featured]="plan.featured">
+  <div class="pricing-block-content">
+      <h3>{{plan.title}}</h3>
+      <p class="pricing-sub">{{plan.subtitle}}</p>
+      <div class="pricing">
+          <div class="price"><span>{{plan.currency}}</span>{{plan.price}}</div>
+          <p>{{plan.description}}</p>
+      </div>
+      <ul>
+          <li>{{plan.downloads}}</li>
+          <li>{{plan.extensions}}</li>
+          <li>{{plan.tutorials}}</li>
+          <li>{{plan.support}}</li>
+          <li>{{plan.updates}}</li>
+      </ul>
+      <a href="{{plan.buttonlink}}" class="button">{{plan.buttontext}}</a>
+  </div>
+</div>
+<!--End Pricing Block-->

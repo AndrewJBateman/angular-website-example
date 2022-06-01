@@ -1,41 +1,93 @@
 <div id="header" class="nav-collapse nav-solid">
   <div class="row clearfix">
     <div class="col-1">
+      <!--Logo-->
       <div id="logo">
+        <!--Logo that is shown on the banner-->
         <img src="assets/images/logo.png" id="banner-logo" alt="Landing Page" />
+        <!--End of Banner Logo-->
 
+        <!--The Logo that is shown on the sticky Navigation Bar-->
         <img
           src="assets/images/logo-2.png"
           id="navigation-logo"
           alt="Landing Page"
         />
+        <!--End of Navigation Logo-->
       </div>
+      <!--End of Logo-->
 
       <aside>
-        <app-user-profile-icon
-          [profileImage]="profileImage"
-        ></app-user-profile-icon>
         <app-social></app-social>
       </aside>
 
+      <!--Main Navigation-->
       <nav id="nav-main">
-        <app-navmenu [menu]="menu" [menuOpen]="true"></app-navmenu>
+        <ul>
+          <li>
+            <a
+              routerLink="/home"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              Home</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/about"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/gallery"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/services"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/testimonials"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/clients"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Clients</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/pricing"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Pricing</a
+            >
+          </li>
+        </ul>
       </nav>
+      <!--End of Main Navigation-->
 
-      <div id="nav-trigger">
-        <span
-          [class.open]="menuOpen == true"
-          (click)="toggleMenu(!menuOpen)"
-        ></span>
-      </div>
-      <nav id="nav-mobile">
-        <app-navmenu
-          [menu]="menu"
-          *ngIf="menuOpen === true"
-          (menuStatus)="toggleMenu($event)"
-          [menuOpen]="menuOpen"
-        ></app-navmenu>
-      </nav>
+      <div id="nav-trigger"><span></span></div>
+      <nav id="nav-mobile"></nav>
     </div>
   </div>
 </div>
+<!--End of Header-->

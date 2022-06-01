@@ -1,1 +1,14 @@
-<p>gallery-page works!</p>
+<section id="gallery" class="introduction scrollto text-center">
+  <div class="row clearfix">
+    <aside
+      id="gallery"
+      class="row text-center scrollto clearfix"
+      data-featherlight-gallery
+      data-featherlight-filter="a"
+    >
+      <div *ngFor="let image of images$ | async; let i = index">
+        <app-image-block [image]="image"></app-image-block>
+      </div>
+    </aside>
+  </div>
+</section>

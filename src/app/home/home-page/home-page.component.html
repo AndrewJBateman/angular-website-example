@@ -1,4 +1,4 @@
-<div *ngIf="header">
+<div *ngIf="header$ | async as header">
   <header
     id="banner"
     class="scrollto clearfix"
@@ -16,8 +16,8 @@
           <h2>{{ header.title }}</h2>
         </div>
 
-        <a href="{{ header.buttonlink }}" class="button">{{
-          header.description
+        <a routerLink="{{ header.buttonlink }}" class="button">{{
+          header.buttontext
         }}</a>
       </div>
     </div>

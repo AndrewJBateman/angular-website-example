@@ -1,4 +1,8 @@
-<section id="about" class="introduction scrollto" *ngIf="intro">
+<section
+  id="about"
+  class="introduction scrollto"
+  *ngIf="intro$ | async as intro"
+>
   <div class="row clearfix">
     <div class="col-3">
       <div class="section-heading">
@@ -9,7 +13,7 @@
     </div>
 
     <div class="col-2-3" *ngIf="features">
-      <div *ngFor="let feature of features">
+      <div *ngFor="let feature of features; let i = index">
         <app-feature-block [feature]="feature"></app-feature-block>
       </div>
     </div>

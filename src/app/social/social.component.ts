@@ -1,5 +1,6 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from "@angular/core";
-import { ConfigService } from "../services/config.service";
+import { ConfigService } from "../shared/services/config.service";
 
 @Component({
   selector: "app-social",
@@ -7,14 +8,15 @@ import { ConfigService } from "../services/config.service";
   styleUrls: ["./social.component.css"],
 })
 export class SocialComponent implements OnInit {
-  socialsites: {
-    id: number;
-    link: string;
-    title: string;
-    target: string;
-    username: string;
-    icon: string;
-  }[];
+  // socialsites: {
+  //   id: number;
+  //   link: string;
+  //   title: string;
+  //   target: string;
+  //   username: string;
+  //   icon: string;
+  // }[];
+  socialsites$: Observable<any> = new Observable();
 
   constructor(private config: ConfigService) {}
 
@@ -22,9 +24,10 @@ export class SocialComponent implements OnInit {
     this.getSocialsites();
   }
 
-  getSocialsites() {
-    return this.config
-      .getSettings("websites")
-      .subscribe((data) => (this.socialsites = data));
+  getSocialsites(): void {
+    // return this.config
+    //   .getSettings("websites")
+    //   .subscribe((data) => (this.socialsites = data));
+    this.socialsites$ = this.config.getSettings("websites");
   }
 }

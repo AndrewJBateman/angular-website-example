@@ -1,11 +1,14 @@
-<footer id="landing-footer" class="clearfix">
+<footer id="landing-footer" class="clearfix" *ngIf="footer$ | async as footer">
   <div class="row clearfix">
     <p id="copyright" class="col-2">
-      Made with love by <a href="https://www.shapingrain.com">ShapingRain</a>
+      {{ footer.tagline }}
+      <a routerLink="{{ footer.developerlink }}">{{ footer.developer }}</a>
     </p>
 
-    <div class="col-2 social-icons" id="footer-social app-social">
+    <!--Social Icons in Footer-->
+    <div class="col-2" style="text-align: right">
       <app-social></app-social>
     </div>
+    <!--End of Social Icons in Footer-->
   </div>
 </footer>

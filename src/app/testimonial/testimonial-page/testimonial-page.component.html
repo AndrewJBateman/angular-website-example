@@ -1,0 +1,14 @@
+<aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
+  <div class="row clearfix">
+    <div class="section-heading" *ngIf="testimonials$ | async as testimonials">
+      <h3>{{ testimonials.tagline }}</h3>
+      <h2 class="section-title">{{ testimonials.title }}</h2>
+    </div>
+
+    <!--User Testimonial-->
+    <div *ngFor="let feedback of feedback$ | async; let i = index">
+      <app-feedback-block [feedback]="feedback"></app-feedback-block>
+    </div>
+    <!-- End of Testimonial-->
+  </div>
+</aside>

@@ -1,65 +1,65 @@
-import { Component, OnInit, AfterContentChecked } from "@angular/core";
-import { Location } from "@angular/common";
-import { Observable, of } from "rxjs";
-import { RouterLinkActive } from "@angular/router";
-import { AuthenticationService } from "../services/authentication.service";
-import * as $ from "jquery";
-import { ConfigService } from "../services/config.service";
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+// import { RouterLink, RouterLinkActive } from '@angular/router';
+import * as $ from 'jquery';
+
 
 @Component({
-  selector: "app-navigation",
-  templateUrl: "./navigation.component.html",
-  styleUrls: ["./navigation.component.css"],
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent implements OnInit, AfterContentChecked {
-  menu: { id: number; title: string; link: string; outlet: string }[];
+export class NavigationComponent implements OnInit {
 
-  isLoggedIn: boolean;
-  menuOpen: boolean;
-  database = "menu";
-  profileImage: string;
-  user: any;
+  // activetab: string;
 
-  constructor(
-    private location: Location,
-    private auth: AuthenticationService,
-    private config: ConfigService
-  ) {}
+  constructor(private location: Location) { }
 
   ngOnInit() {
-    this.menuOpen = false;
-    this.getMenu();
-    this.isLoggedIn = this.auth.isloggedIn();
-    this.getUser();
-  }
-  ngAfterContentChecked() {
-    of(this.auth.isloggedIn()).subscribe(() => {
-      this.getUser();
+    // this.activetab = this.location.path();
+    // console.log(`from ${this.activetab}`);
+
+    (<any>$)(document).ready(function () {
+
+        (<any>$)('#nav-mobile').html((<any>$)('#nav-main').html());
+        (<any>$)('#nav-trigger span').on('click', function() {
+          if ((<any>$)('nav#nav-mobile ul').hasClass('expanded')) {
+            (<any>$)('nav#nav-mobile ul.expanded').removeClass('expanded').slideUp(250);
+            (<any>$)(this).removeClass('open');
+          } else {
+            (<any>$)('nav#nav-mobile ul').addClass('expanded').slideDown(250);
+            (<any>$)(this).addClass('open');
+          }
+        });
+
+        (<any>$)('#nav-mobile').html((<any>$)('#nav-main').html());
+        (<any>$)('#nav-mobile ul a').on('click', function() {
+          if ((<any>$)('nav#nav-mobile ul').hasClass('expanded')) {
+            (<any>$)('nav#nav-mobile ul.expanded').removeClass('expanded').slideUp(250);
+            (<any>$)('#nav-trigger span').removeClass('open');
+          }
+
+        });
+
+      /* Sticky Navigation */
+        // if (!!(<any>$).prototype.stickyNavbar) {
+        //   (<any>$)('#header').stickyNavbar();
+        // }
+
+        // (<any>$)('#content').waypoint(function (direction) {
+        //   if (direction === 'down') {
+        //     (<any>$)('#header').addClass('nav-solid fadeInDown');
+        //   } else {
+        //     (<any>$)('#header').removeClass('nav-solid fadeInDown');
+        //   }
+        // });
+
     });
-  }
 
-  logout() {
-    this.auth.logout();
-  }
-
-  toggleMenu(status: boolean) {
-    this.menuOpen = status;
-  }
-
-  getMenu() {
-    this.config.getSettings(this.database).subscribe((setting) => {
-      this.menu = setting;
-      console.log(setting);
-    });
-  }
-
-  getUser() {
-    this.user = JSON.parse(localStorage.getItem("currentUser"));
-
-    if (this.user) {
-      this.profileImage = this.user.image;
-    } else {
-      this.profileImage = "default-user.jpg";
     }
-  }
+  // getActiveTab(tabname: string) {
+  //   this.activetab = tabname;
+  //   console.log(tabname);
+  // }
+
 }
