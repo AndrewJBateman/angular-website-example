@@ -1,7 +1,7 @@
 <div *ngIf="header$ | async as header">
   <header
     id="banner"
-    class="scrollto clearfix"
+    class="scrollto clearfix shift-left"
     data-enllax-ratio=".5"
     [style.background]="
       'url(../assets/images/banner-images/' +
@@ -9,7 +9,7 @@
       ' ) no-repeat center top;'
     "
   >
-    <div id="banner-content" class="row clearfix">
+    <div id="banner-content" class="row clearfix pull-right">
       <div class="col-38">
         <div class="section-heading">
           <h1>{{ header.tagline }}</h1>

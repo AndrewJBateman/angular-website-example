@@ -1,6 +1,5 @@
 <ul [class.expanded]="menuOpen === true">
   <li *ngFor="let menuItem of menu">
-    <ng-template>
       <a
         routerLink="{{ menuItem.link }}"
         (click)="toggleMenu($event)"
@@ -8,6 +7,6 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >{{ menuItem.title }}</a
       >
-    </ng-template>
   </li>
+
 </ul>
