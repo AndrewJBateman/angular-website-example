@@ -1,6 +1,6 @@
 <ul [class.expanded]="menuOpen === true">
   <li *ngFor="let menuItem of menu">
-    <ng-template #thenBlock>
+    <ng-template>
       <a
         routerLink="{{ menuItem.link }}"
         (click)="toggleMenu($event)"
