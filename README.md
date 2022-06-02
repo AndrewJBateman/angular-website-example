@@ -25,9 +25,9 @@
 
 ## :books: General info
 
-* Includes code from [AdMISTER STUDIOs](https://www.youtube.com/c/AdMISTERSTUDIOs/featured) - see [:clap: Inspiration](#clap-inspiration) below, but with changes to reduce lines of code and use latest Angular version. Some of the videos listed below are not applicable as I decided to just reproduce the Namari website and not include a blog, user login/logoff, separate API etc.
+* Includes code from [AdMISTER STUDIOs](https://www.youtube.com/c/AdMISTERSTUDIOs/featured) - see [:clap: Inspiration](#clap-inspiration) below, but with changes to reduce lines of code and use latest Angular version. Some of the videos listed below are not applicable as I decided to just reproduce the Namari website and not include a blog, user login/logoff, auth guard, separate API etc.
 * [Angular feature modules](https://angular.io/guide/feature-modules) used for organisational best practise
-* Single ervice used to fetch data for all pages so this data can be accessed from an API. This meant I could not use custom interface classes.Each module should have its own service with interface class.
+* Single service used to fetch data for all pages so this data can be accessed from an API. This meant I could not use custom interface classes. Each module should have its own service with interface class.
 
 ## :camera: Screenshots
 
@@ -85,8 +85,8 @@ getSettings(database: string, id?: number): Observable<any> {
 * [Create your first website using angular 6 -- Part 13 -- Components to Feature Modules](https://www.youtube.com/watch?v=WDNV4iifHwM)
 * [Create your first website using angular 6 -- Part 14 -- Components to Feature Modules](https://www.youtube.com/watch?v=tj7V67-BY5U)
 * [Create your first website using angular 6 -- Part 15 -- Blog Component to Blog Feature Module](https://www.youtube.com/watch?v=By4tT-bNDXY)
-* [Create your first website using angular 6 -- Part 16 Creating email contact form API](https://www.youtube.com/watch?v=eNj9XbE9kdk&t=22s)
-* [Create your first website using angular 6 -- Part 17 --send email from Angular APP](https://www.youtube.com/watch?v=QCnoamZnTsQ&t=23s)
+* [Create your first website using angular 6 -- Part 16 -- Creating email contact form API](https://www.youtube.com/watch?v=eNj9XbE9kdk&t=22s)
+* [Create your first website using angular 6 -- Part 17 -- send email from Angular APP](https://www.youtube.com/watch?v=QCnoamZnTsQ&t=23s)
 * [One Page Love website of html templates](https://onepagelove.com/namari)
 
 ## :file_folder: License
