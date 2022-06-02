@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { configuration } from "./configuration";
 import { Observable, of, from } from "rxjs";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { catchError } from "rxjs/operators";
+import { catchError, tap } from "rxjs/operators";
 import { IFooter } from "src/app/footer/footer";
 
 const httpOptions = {
@@ -31,16 +31,9 @@ export class ConfigService {
   }
 
   getSettings(database: string, id?: number): Observable<any> {
-    let uid = id || null;
-    let url: string;
-    if (uid !== null) {
-      url = `api/${database}/${id}`;
-    } else {
-      url = `api/${database}`;
-    }
+    let url = id? `api/${database}/${id}` : `api/${database}`;
     return this.http.get<any>(url).pipe(
-      // tap((setting) => console.log('setting: ', setting)),
-      catchError(this.handleError(`get for ${database}`, []))
+      catchError(this.handleError(`Error getting data from ${database}`, []))
     );
   }
 }

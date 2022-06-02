@@ -17,76 +17,32 @@
       </div>
       <!--End of Logo-->
 
-      <aside>
+      <!-- <aside>
         <app-social></app-social>
-      </aside>
+      </aside> -->
 
       <!--Main Navigation-->
       <nav id="nav-main">
-        <ul>
-          <li>
-            <a
-              routerLink="/home"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-            >
-              Home</a
-            >
-          </li>
-          <li>
-            <a
-              routerLink="/about"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              routerLink="/gallery"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Gallery</a
-            >
-          </li>
-          <li>
-            <a
-              routerLink="/services"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Services</a
-            >
-          </li>
-          <li>
-            <a
-              routerLink="/testimonials"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Testimonials</a
-            >
-          </li>
-          <li>
-            <a
-              routerLink="/clients"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Clients</a
-            >
-          </li>
-          <li>
-            <a
-              routerLink="/pricing"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              >Pricing</a
-            >
-          </li>
-        </ul>
+        <app-navmenu [menu]="menu" [menuOpen]="true"></app-navmenu>
+
       </nav>
       <!--End of Main Navigation-->
 
-      <div id="nav-trigger"><span></span></div>
-      <nav id="nav-mobile"></nav>
+      <div id="nav-trigger">
+
+        <span
+          [class.open]="menuOpen == true"
+          (click)="toggleMenu(!menuOpen)"
+        ></span>
+      </div>
+      <nav id="nav-mobile">
+        <app-navmenu
+          [menu]="menu"
+          *ngIf="menuOpen === true"
+          (menuStatus)="toggleMenu($event)"
+          [menuOpen]="menuOpen"
+        ></app-navmenu>
+      </nav>
     </div>
   </div>
 </div>

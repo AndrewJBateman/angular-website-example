@@ -20,7 +20,7 @@ export class HomePageComponent implements OnInit {
   constructor(private config: ConfigService) {}
 
   ngOnInit() {
-    this.getPageData("pages", 9);
+    this.getPageData("pages", 7);
   }
 
   getPageData(database: string, id?: number): void {

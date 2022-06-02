@@ -9,16 +9,6 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const pages = [
       {
-        id: 0,
-        name: "header",
-        tagline: "A FREE AND SIMPLE LANDING PAGE",
-        title:
-          "Namari is free landing page template you can use for your projects. It is free to use for your personal and commercial projects, enjoy!",
-        buttontext: "START CREATING TODAY",
-        buttonlink: "/home",
-        image: "banner-image-1.jpg",
-      },
-      {
         id: 1,
         name: "intro",
         tagline: "SUCCESS",
@@ -57,14 +47,14 @@ export class InMemoryDataService implements InMemoryDbService {
         description: "",
       },
       {
-        id: 7,
+        id: 6,
         name: "footer",
         tagline: "Made with ❤ by",
         developer: "Bateman Industries",
         developerlink: "andrewbateman.org",
       },
       {
-        id: 9,
+        id: 7,
         name: "header",
         tagline: "A FREE AND SIMPLE LANDING PAGE",
         title:
@@ -113,15 +103,14 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 6, name: "gallery-image-6.jpg" },
     ];
     const menu = [
-      { id: 1, title: "Home", link: "/home", outlet: "" },
-      { id: 2, title: "About", link: "/about", outlet: "" },
-      { id: 3, title: "Services", link: "/services", outlet: "" },
-      { id: 4, title: "Gallery", link: "/gallery", outlet: "" },
-      { id: 5, title: "Testimonials", link: "/testimonials", outlet: "" },
-      { id: 6, title: "Clients", link: "/clients", outlet: "" },
-      { id: 7, title: "Pricing", link: "/pricing", outlet: "" },
+      { id: 1, title: "Home", link: "/home"},
+      { id: 2, title: "About", link: "/about"},
+      { id: 3, title: "Services", link: "/services"},
+      { id: 4, title: "Gallery", link: "/gallery"},
+      { id: 5, title: "Testimonials", link: "/testimonials"},
+      { id: 6, title: "Clients", link: "/clients"},
+      { id: 7, title: "Pricing", link: "/pricing"},
     ];
-
     const companies = [
       {
         id: 1,
@@ -178,7 +167,7 @@ export class InMemoryDataService implements InMemoryDbService {
         logo: "company-logo9.png",
       },
     ];
-    const feedbacks = [
+    const feedback = [
       {
         id: 1,
         name: "John Doe",
@@ -303,7 +292,7 @@ export class InMemoryDataService implements InMemoryDbService {
       features,
       images,
       companies,
-      feedbacks,
+      feedback,
       plans,
       websites,
     };

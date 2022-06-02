@@ -16,7 +16,7 @@ export class TestimonialPageComponent implements OnInit {
   //   description: string;
   // }[];
 
-  // feedbacks: {
+  // feedback: {
   //   id: number;
   //   name: string;
   //   userimage: string;
@@ -30,7 +30,7 @@ export class TestimonialPageComponent implements OnInit {
 
   ngOnInit() {
     this.getPageData("pages", 4);
-    this.getBlockData("feedbacks");
+    this.getBlockData("feedback");
   }
 
   getPageData(database: string, id?: number) {

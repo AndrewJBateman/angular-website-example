@@ -15,7 +15,7 @@ export class FooterComponent implements OnInit {
   constructor(private config: ConfigService) {}
 
   ngOnInit() {
-    this.getPageData("pages", 7);
+    this.getPageData("pages", 6);
   }
 
   getPageData(database: string, id?: number): void {
