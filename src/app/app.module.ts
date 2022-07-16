@@ -13,8 +13,8 @@ import { SocialComponent } from './social/social.component';
 import { WebsiteBlockComponent } from "./website-block/website-block.component";
 
 // Modules
-import { AboutModule } from "./about/about.module";
 import { AppRoutingModule } from "./app-routing.module";
+import { AboutModule } from "./about/about.module";
 import { ClientsModule } from "./clients/clients.module";
 import { GalleryModule } from "./gallery/gallery.module";
 import { HomeModule } from "./home/home.module";
