@@ -4,8 +4,7 @@ import { ConfigService } from "../../shared/services/config.service";
 
 @Component({
   selector: "app-services-page",
-  templateUrl: "./services-page.component.html",
-  styleUrls: ["./services-page.component.css"],
+  templateUrl: "./services-page.component.html"
 })
 export class ServicesPageComponent implements OnInit {
   // services: {

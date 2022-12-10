@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-pricing-block",
-  templateUrl: "./pricing-block.component.html",
-  styleUrls: ["./pricing-block.component.css"],
+  templateUrl: "./pricing-block.component.html"
 })
 export class PricingBlockComponent implements OnInit {
   @Input() plan: {

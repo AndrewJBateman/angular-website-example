@@ -4,8 +4,7 @@ import { ConfigService } from "src/app/shared/services/config.service";
 
 @Component({
   selector: "app-clients-page",
-  templateUrl: "./clients-page.component.html",
-  styleUrls: ["./clients-page.component.css"],
+  templateUrl: "./clients-page.component.html"
 })
 export class ClientsPageComponent implements OnInit {
   // clients: {

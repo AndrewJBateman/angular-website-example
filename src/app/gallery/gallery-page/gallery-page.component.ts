@@ -4,8 +4,7 @@ import { ConfigService } from "../../shared/services/config.service";
 
 @Component({
   selector: "app-gallery-page",
-  templateUrl: "./gallery-page.component.html",
-  styleUrls: ["./gallery-page.component.css"],
+  templateUrl: "./gallery-page.component.html"
 })
 export class GalleryPageComponent implements OnInit {
   images$: Observable<any> = new Observable();

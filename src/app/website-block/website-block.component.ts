@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-website-block",
-  templateUrl: "./website-block.component.html",
-  styleUrls: ["./website-block.component.css"],
+  templateUrl: "./website-block.component.html"
 })
 export class WebsiteBlockComponent implements OnInit {
   @Input() website: {

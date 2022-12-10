@@ -4,8 +4,7 @@ import { ConfigService } from "src/app/shared/services/config.service";
 
 @Component({
   selector: "app-about-page",
-  templateUrl: "./about-page.component.html",
-  styleUrls: ["./about-page.component.css"],
+  templateUrl: "./about-page.component.html"
 })
 export class AboutPageComponent implements OnInit {
   // intro: {

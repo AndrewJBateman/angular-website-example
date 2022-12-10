@@ -4,8 +4,7 @@ import { ConfigService } from "../shared/services/config.service";
 
 @Component({
   selector: "app-social",
-  templateUrl: "./social.component.html",
-  styleUrls: ["./social.component.css"],
+  templateUrl: "./social.component.html"
 })
 export class SocialComponent implements OnInit {
   // socialsites: {

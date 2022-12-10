@@ -2,8 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navmenu',
-  templateUrl: './navmenu.component.html',
-  styleUrls: ['./navmenu.component.css']
+  templateUrl: './navmenu.component.html'
 })
 export class NavmenuComponent {
 

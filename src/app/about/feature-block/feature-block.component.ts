@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "app-feature-block",
-  templateUrl: "./feature-block.component.html",
-  styleUrls: ["./feature-block.component.css"],
+  templateUrl: "./feature-block.component.html"
 })
 export class FeatureBlockComponent implements OnInit {
   @Input() feature: {
