@@ -1,18 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
+import { Feature } from '../models/feature.model';
 
 @Component({
-  selector: "app-feature-block",
-  templateUrl: "./feature-block.component.html"
+	selector: 'app-feature-block',
+	templateUrl: './feature-block.component.html',
 })
-export class FeatureBlockComponent implements OnInit {
-  @Input() feature: {
-    id: number;
-    icon: string;
-    title: string;
-    description: string;
-  };
-
-  constructor() {}
-
-  ngOnInit() {}
+export class FeatureBlockComponent {
+	@Input() feature: Feature;
 }

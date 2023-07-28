@@ -1,27 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
+import { Plan } from '../models/plan.model';
 
 @Component({
-  selector: "app-pricing-block",
-  templateUrl: "./pricing-block.component.html"
+	selector: 'app-pricing-block',
+	templateUrl: './pricing-block.component.html',
 })
-export class PricingBlockComponent implements OnInit {
-  @Input() plan: {
-    id: 1;
-    title: string;
-    subtitle: string;
-    description: string;
-    price: string;
-    currency: string;
-    downloads: string;
-    extensions: string;
-    tutorials: string;
-    support: string;
-    updates: string;
-    buttontext: string;
-    buttonlink: string;
-    featured: false;
-  };
-  constructor() {}
-
-  ngOnInit() {}
+export class PricingBlockComponent {
+	@Input() plan: Plan;
 }

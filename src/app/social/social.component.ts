@@ -1,32 +1,22 @@
 import { Observable } from 'rxjs';
-import { Component, OnInit } from "@angular/core";
-import { ConfigService } from "../shared/services/config.service";
+import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../shared/services/config.service';
+import { Site } from './models/site.model';
 
 @Component({
-  selector: "app-social",
-  templateUrl: "./social.component.html"
+	selector: 'app-social',
+	templateUrl: './social.component.html',
 })
 export class SocialComponent implements OnInit {
-  // socialsites: {
-  //   id: number;
-  //   link: string;
-  //   title: string;
-  //   target: string;
-  //   username: string;
-  //   icon: string;
-  // }[];
-  socialsites$: Observable<any> = new Observable();
+	socialsites$: Observable<Site[]> = new Observable();
 
-  constructor(private config: ConfigService) {}
+	constructor(private config: ConfigService) {}
 
-  ngOnInit() {
-    this.getSocialsites();
-  }
+	ngOnInit() {
+		this.getSocialsites();
+	}
 
-  getSocialsites(): void {
-    // return this.config
-    //   .getSettings("websites")
-    //   .subscribe((data) => (this.socialsites = data));
-    this.socialsites$ = this.config.getSettings("websites");
-  }
+	getSocialsites(): void {
+		this.socialsites$ = this.config.getSettings('websites');
+	}
 }

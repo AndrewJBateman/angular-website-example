@@ -5,15 +5,8 @@ import { PricingRoutingModule } from './pricing-routing.module';
 import { PricingBlockComponent } from './pricing-block/pricing-block.component';
 import { PricingPageComponent } from './pricing-page/pricing-page.component';
 
-
 @NgModule({
-  declarations: [
-    PricingBlockComponent,
-    PricingPageComponent
-  ],
-  imports: [
-    CommonModule,
-    PricingRoutingModule
-  ]
+	declarations: [PricingBlockComponent, PricingPageComponent],
+	imports: [CommonModule, PricingRoutingModule],
 })
-export class PricingModule { }
+export class PricingModule {}

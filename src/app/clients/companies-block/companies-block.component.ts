@@ -1,13 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
+import { Company } from '../models/company.model';
 
 @Component({
-  selector: "app-companies-block",
-  templateUrl: "./companies-block.component.html"
+	selector: 'app-companies-block',
+	templateUrl: './companies-block.component.html',
 })
-export class CompaniesBlockComponent implements OnInit {
-  @Input() company: { id: number; name: string; weblink: string; logo: string };
-
-  constructor() {}
-
-  ngOnInit() {}
+export class CompaniesBlockComponent {
+	@Input() company: Company;
 }

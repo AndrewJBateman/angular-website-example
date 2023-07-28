@@ -1,12 +1,11 @@
 <ul [class.expanded]="menuOpen === true">
-  <li *ngFor="let menuItem of menu">
-      <a
-        routerLink="{{ menuItem.link }}"
-        (click)="toggleMenu($event)"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >{{ menuItem.title }}</a
-      >
-  </li>
-
+	<li *ngFor="let menuItem of menu">
+		<a
+			routerLink="{{ menuItem.link }}"
+			(click)="toggleMenu()"
+			routerLinkActive="active"
+			[routerLinkActiveOptions]="{ exact: true }"
+			>{{ menuItem.title }}</a
+		>
+	</li>
 </ul>

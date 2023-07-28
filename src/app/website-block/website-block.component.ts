@@ -1,20 +1,16 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: "app-website-block",
-  templateUrl: "./website-block.component.html"
+	selector: 'app-website-block',
+	templateUrl: './website-block.component.html',
 })
-export class WebsiteBlockComponent implements OnInit {
-  @Input() website: {
-    id: number;
-    link: string;
-    title: string;
-    target: string;
-    username: string;
-    icon: string;
-  };
-
-  constructor() {}
-
-  ngOnInit() {}
+export class WebsiteBlockComponent {
+	@Input() website: {
+		id: number;
+		link: string;
+		title: string;
+		target: string;
+		username: string;
+		icon: string;
+	};
 }
