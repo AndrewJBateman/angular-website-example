@@ -35,7 +35,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v15](https://angular.io/) JS framework
+* [Angular v16](https://angular.io/) JS framework
 * [Font Awesome v4](https://fontawesome.com/) icons
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to [subscribe](http://reactivex.io/documentation/operators/subscribe.html) to the API data [observable](http://reactivex.io/documentation/observable.html).
 * [The HttpClient in @angular/common/http](https://angular.io/guide/http) offers a simplified client HTTP API for Angular applications that rests on the XMLHttpRequest interface exposed by browsers.
@@ -95,4 +95,4 @@ getSettings(database: string, id?: number): Observable<any> {
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
