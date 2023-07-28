@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "websitePractise": {
+    "angular-website-example": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,11 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/websitePractise",
+            "outputPath": "dist/angular-website-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "websitePractise:build"
+            "browserTarget": "angular-website-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "websitePractise:build:production"
+              "browserTarget": "angular-website-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "websitePractise:build"
+            "browserTarget": "angular-website-example:build"
           }
         },
         "test": {
@@ -79,16 +79,25 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
+            "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": ["src/styles.css"],
             "scripts": [],
             "assets": ["src/favicon.ico", "src/assets"]
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     },
-    "websitePractise-e2e": {
+    "angular-website-example-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "targets": {
@@ -96,11 +105,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "websitePractise:serve"
+            "devServerTarget": "angular-website-example:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "websitePractise:serve:production"
+              "devServerTarget": "angular-website-example:serve:production"
             }
           }
         }
