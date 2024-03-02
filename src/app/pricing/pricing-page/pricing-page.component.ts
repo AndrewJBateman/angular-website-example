@@ -3,10 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/shared/services/config.service';
 import { Pricing } from '../models/pricing.model';
 import { Plan } from '../models/plan.model';
+import { AsyncPipe } from '@angular/common';
+import { PricingBlockComponent } from '../pricing-block/pricing-block.component';
 
 @Component({
-	selector: 'app-pricing-page',
-	templateUrl: './pricing-page.component.html',
+    selector: 'app-pricing-page',
+    templateUrl: './pricing-page.component.html',
+    standalone: true,
+    imports: [PricingBlockComponent, AsyncPipe],
 })
 export class PricingPageComponent implements OnInit {
 	pricing$: Observable<Pricing> = new Observable();

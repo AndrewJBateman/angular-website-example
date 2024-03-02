@@ -6,7 +6,6 @@ import { FeedbackBlockComponent } from './feedback-block/feedback-block.componen
 import { TestimonialPageComponent } from './testimonial-page/testimonial-page.component';
 
 @NgModule({
-	declarations: [FeedbackBlockComponent, TestimonialPageComponent],
-	imports: [CommonModule, TestimonialRoutingModule],
+    imports: [CommonModule, TestimonialRoutingModule, FeedbackBlockComponent, TestimonialPageComponent],
 })
 export class TestimonialModule {}

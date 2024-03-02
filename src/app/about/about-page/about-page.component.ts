@@ -3,10 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/shared/services/config.service';
 import { Intro } from '../models/intro.model';
 import { Feature } from '../models/feature.model';
+import { AsyncPipe } from '@angular/common';
+import { FeatureBlockComponent } from '../feature-block/feature-block.component';
 
 @Component({
 	selector: 'app-about-page',
 	templateUrl: './about-page.component.html',
+	standalone: true,
+	imports: [FeatureBlockComponent, AsyncPipe],
 })
 export class AboutPageComponent implements OnInit {
 	intro$: Observable<Intro> = new Observable();

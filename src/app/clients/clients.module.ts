@@ -6,7 +6,11 @@ import { ClientsPageComponent } from './clients-page/clients-page.component';
 import { CompaniesBlockComponent } from './companies-block/companies-block.component';
 
 @NgModule({
-	declarations: [ClientsPageComponent, CompaniesBlockComponent],
-	imports: [CommonModule, ClientsRoutingModule],
+	imports: [
+		CommonModule,
+		ClientsRoutingModule,
+		ClientsPageComponent,
+		CompaniesBlockComponent,
+	],
 })
 export class ClientsModule {}

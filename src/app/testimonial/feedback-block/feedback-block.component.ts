@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-	selector: 'app-feedback-block',
-	templateUrl: './feedback-block.component.html',
+    selector: 'app-feedback-block',
+    templateUrl: './feedback-block.component.html',
+    standalone: true,
 })
 export class FeedbackBlockComponent {
 	@Input() feedback: {

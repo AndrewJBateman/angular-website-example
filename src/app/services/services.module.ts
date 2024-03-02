@@ -5,7 +5,6 @@ import { ServicesRoutingModule } from './services-routing.module';
 import { ServicesPageComponent } from './services-page/services-page.component';
 
 @NgModule({
-	declarations: [ServicesPageComponent],
-	imports: [CommonModule, ServicesRoutingModule],
+	imports: [CommonModule, ServicesRoutingModule, ServicesPageComponent],
 })
 export class ServicesModule {}

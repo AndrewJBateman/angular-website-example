@@ -3,10 +3,14 @@ import { Observable } from 'rxjs';
 import { ConfigService } from 'src/app/shared/services/config.service';
 import { Client } from '../models/client.model';
 import { Company } from '../models/company.model';
+import { AsyncPipe } from '@angular/common';
+import { CompaniesBlockComponent } from '../companies-block/companies-block.component';
 
 @Component({
 	selector: 'app-clients-page',
 	templateUrl: './clients-page.component.html',
+	standalone: true,
+	imports: [CompaniesBlockComponent, AsyncPipe],
 })
 export class ClientsPageComponent implements OnInit {
 	clients$: Observable<Client[]> = new Observable();

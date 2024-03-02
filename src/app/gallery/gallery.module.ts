@@ -6,7 +6,6 @@ import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { ImageBlockComponent } from './image-block/image-block.component';
 
 @NgModule({
-	declarations: [GalleryPageComponent, ImageBlockComponent],
-	imports: [CommonModule, GalleryRoutingModule],
+    imports: [CommonModule, GalleryRoutingModule, GalleryPageComponent, ImageBlockComponent],
 })
 export class GalleryModule {}

@@ -2,10 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ConfigService } from '../../shared/services/config.service';
 import { Header } from '../models/header.model';
+import { AsyncPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-	selector: 'app-home-page',
-	templateUrl: './home-page.component.html',
+    selector: 'app-home-page',
+    templateUrl: './home-page.component.html',
+    standalone: true,
+    imports: [RouterLink, AsyncPipe],
 })
 export class HomePageComponent implements OnInit {
 	header$: Observable<Header>;

@@ -28,14 +28,7 @@ import { ConfigService } from './shared/services/config.service';
 import { InMemoryDataService } from './shared/services/in-memory-data.service';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		FooterComponent,
-		NavigationComponent,
-		NavmenuComponent,
-		SocialComponent,
-		WebsiteBlockComponent,
-	],
+	declarations: [AppComponent],
 	imports: [
 		AboutModule,
 		AppRoutingModule,
@@ -56,6 +49,11 @@ import { InMemoryDataService } from './shared/services/in-memory-data.service';
 			dataEncapsulation: false,
 			passThruUnknownUrl: true,
 		}),
+		FooterComponent,
+		NavigationComponent,
+		NavmenuComponent,
+		SocialComponent,
+		WebsiteBlockComponent,
 	],
 	providers: [ConfigService],
 	bootstrap: [AppComponent],

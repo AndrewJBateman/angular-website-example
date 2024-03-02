@@ -6,7 +6,11 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { FeatureBlockComponent } from './feature-block/feature-block.component';
 
 @NgModule({
-	declarations: [AboutPageComponent, FeatureBlockComponent],
-	imports: [CommonModule, AboutRoutingModule],
+	imports: [
+		CommonModule,
+		AboutRoutingModule,
+		AboutPageComponent,
+		FeatureBlockComponent,
+	],
 })
 export class AboutModule {}

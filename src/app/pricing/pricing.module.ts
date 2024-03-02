@@ -6,7 +6,6 @@ import { PricingBlockComponent } from './pricing-block/pricing-block.component';
 import { PricingPageComponent } from './pricing-page/pricing-page.component';
 
 @NgModule({
-	declarations: [PricingBlockComponent, PricingPageComponent],
-	imports: [CommonModule, PricingRoutingModule],
+    imports: [CommonModule, PricingRoutingModule, PricingBlockComponent, PricingPageComponent],
 })
 export class PricingModule {}
