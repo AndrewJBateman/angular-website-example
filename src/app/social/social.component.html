@@ -1,11 +1,13 @@
 <ul class="social-icons">
-	<li *ngFor="let website of socialsites$ | async; let i = index">
-		<a
-			target="{{ website.target }}"
-			title="{{ website.title }}"
-			href="{{ website.link }}{{ website.username }}">
-			<i class="fa fa-{{ website.icon }} fa-1x"></i
-			><span>{{ website.title }}</span>
-		</a>
-	</li>
-</ul>
+  @for (website of socialsites$ | async; track website; let i = $index) {
+    <li>
+      <a
+        target="{{ website.target }}"
+        title="{{ website.title }}"
+        href="{{ website.link }}{{ website.username }}">
+        <i class="fa fa-{{ website.icon }} fa-1x"></i
+          ><span>{{ website.title }}</span>
+        </a>
+      </li>
+    }
+  </ul>

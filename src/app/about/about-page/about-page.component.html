@@ -1,20 +1,22 @@
-<section
-	id="about"
-	class="introduction scrollto pull-right"
-	*ngIf="intro$ | async as intro">
-	<div class="row clearfix">
-		<div class="col-3">
-			<div class="section-heading">
-				<h3>{{ intro.tagline }}</h3>
-				<h2 class="section-title">{{ intro.title }}</h2>
-				<p class="section-subtitle">{{ intro.description }}</p>
+@if (intro$ | async; as intro) {
+	<section id="about" class="introduction scrollto pull-right">
+		<div class="row clearfix">
+			<div class="col-3">
+				<div class="section-heading">
+					<h3>{{ intro.tagline }}</h3>
+					<h2 class="section-title">{{ intro.title }}</h2>
+					<p class="section-subtitle">{{ intro.description }}</p>
+				</div>
 			</div>
+			@if (features$) {
+				<div class="col-2-3">
+					@for (feature of features$ | async; track feature; let i = $index) {
+						<div>
+							<app-feature-block [feature]="feature"></app-feature-block>
+						</div>
+					}
+				</div>
+			}
 		</div>
-
-		<div class="col-2-3" *ngIf="features$">
-			<div *ngFor="let feature of features$ | async; let i = index">
-				<app-feature-block [feature]="feature"></app-feature-block>
-			</div>
-		</div>
-	</div>
-</section>
+	</section>
+}

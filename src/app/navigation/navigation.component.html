@@ -1,45 +1,46 @@
 <div id="header" class="nav-collapse nav-solid">
-	<div class="row clearfix">
-		<div class="col-1">
-			<!--Logo-->
-			<div id="logo">
-				<!--Logo that is shown on the banner-->
-				<img src="assets/images/logo.png" id="banner-logo" alt="Landing Page" />
-				<!--End of Banner Logo-->
+  <div class="row clearfix">
+    <div class="col-1">
+      <!--Logo-->
+      <div id="logo">
+        <!--Logo that is shown on the banner-->
+        <img src="assets/images/logo.png" id="banner-logo" alt="Landing Page" />
+        <!--End of Banner Logo-->
 
-				<!--The Logo that is shown on the sticky Navigation Bar-->
-				<img
-					src="assets/images/logo-2.png"
-					id="navigation-logo"
-					alt="Landing Page" />
-				<!--End of Navigation Logo-->
-			</div>
-			<!--End of Logo-->
+        <!--The Logo that is shown on the sticky Navigation Bar-->
+        <img
+          src="assets/images/logo-2.png"
+          id="navigation-logo"
+          alt="Landing Page" />
+          <!--End of Navigation Logo-->
+        </div>
+        <!--End of Logo-->
 
-			<!-- <aside>
+        <!-- <aside>
         <app-social></app-social>
       </aside> -->
 
-			<!--Main Navigation-->
-			<nav id="nav-main">
-				<app-navmenu [menu]="menu" [menuOpen]="true"></app-navmenu>
-			</nav>
-			<!--End of Main Navigation-->
+      <!--Main Navigation-->
+      <nav id="nav-main">
+        <app-navmenu [menu]="menu" [menuOpen]="true"></app-navmenu>
+      </nav>
+      <!--End of Main Navigation-->
 
-			<div id="nav-trigger">
-				<span
-					[class.open]="menuOpen === true"
-					(onClick)="toggleMenu(!menuOpen)"
-					(onKeyUp)="toggleMenu(!menuOpen)"></span>
-			</div>
-			<nav id="nav-mobile">
-				<app-navmenu
-					[menu]="menu"
-					*ngIf="menuOpen === true"
-					(menuStatus)="toggleMenu($event)"
-					[menuOpen]="menuOpen"></app-navmenu>
-			</nav>
-		</div>
-	</div>
+      <div id="nav-trigger">
+        <span
+          [class.open]="menuOpen === true"
+          (onClick)="toggleMenu(!menuOpen)"
+        (onKeyUp)="toggleMenu(!menuOpen)"></span>
+      </div>
+      <nav id="nav-mobile">
+        @if (menuOpen === true) {
+          <app-navmenu
+            [menu]="menu"
+            (menuStatus)="toggleMenu($event)"
+          [menuOpen]="menuOpen"></app-navmenu>
+        }
+      </nav>
+    </div>
+  </div>
 </div>
 <!--End of Header-->
