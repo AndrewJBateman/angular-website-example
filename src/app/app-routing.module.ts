@@ -6,45 +6,59 @@ const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{
 		path: 'home',
-		loadChildren: () =>
-			import('./home/home.module').then(mod => mod.HomeModule),
+		loadComponent: () =>
+			import('./home/home-page/home-page.component').then(
+				mod => mod.HomePageComponent
+			),
 	},
 	{
 		path: 'about',
-		loadChildren: () =>
-			import('./about/about.module').then(mod => mod.AboutModule),
+		loadComponent: () =>
+			import('./about/about-page/about-page.component').then(
+				mod => mod.AboutPageComponent
+			),
 	},
 	{
 		path: 'services',
-		loadChildren: () =>
-			import('./services/services.module').then(mod => mod.ServicesModule),
+		loadComponent: () =>
+			import('./services/services-page/services-page.component').then(
+				mod => mod.ServicesPageComponent
+			),
 	},
 	{
 		path: 'testimonials',
-		loadChildren: () =>
-			import('./testimonial/testimonial.module').then(
-				mod => mod.TestimonialModule
+		loadComponent: () =>
+			import('./testimonial/testimonial-page/testimonial-page.component').then(
+				mod => mod.TestimonialPageComponent
 			),
 	},
 	{
 		path: 'gallery',
-		loadChildren: () =>
-			import('./gallery/gallery.module').then(mod => mod.GalleryModule),
+		loadComponent: () =>
+			import('./gallery/gallery-page/gallery-page.component').then(
+				mod => mod.GalleryPageComponent
+			),
 	},
 	{
 		path: 'clients',
-		loadChildren: () =>
-			import('./clients/clients.module').then(mod => mod.ClientsModule),
+		loadComponent: () =>
+			import('./clients/clients-page/clients-page.component').then(
+				mod => mod.ClientsPageComponent
+			),
 	},
 	{
 		path: 'pricing',
-		loadChildren: () =>
-			import('./pricing/pricing.module').then(mod => mod.PricingModule),
+		loadComponent: () =>
+			import('./pricing/pricing-page/pricing-page.component').then(
+				mod => mod.PricingPageComponent
+			),
 	},
 	{
 		path: '404',
 		loadChildren: () =>
-			import('./notfound/notfound.module').then(mod => mod.NotfoundModule),
+			import('./notfound/notfound-page/notfound-page.component').then(
+				mod => mod.NotfoundPageComponent
+			),
 	},
 	{ path: '**', redirectTo: '/404' },
 ];
