@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable, throwError, catchError } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/shared/services/config.service';
 import { Pricing } from '../models/pricing.model';
@@ -7,10 +7,10 @@ import { AsyncPipe } from '@angular/common';
 import { PricingBlockComponent } from '../pricing-block/pricing-block.component';
 
 @Component({
-    selector: 'app-pricing-page',
-    templateUrl: './pricing-page.component.html',
-    standalone: true,
-    imports: [PricingBlockComponent, AsyncPipe],
+	selector: 'app-pricing-page',
+	templateUrl: './pricing-page.component.html',
+	standalone: true,
+	imports: [PricingBlockComponent, AsyncPipe],
 })
 export class PricingPageComponent implements OnInit {
 	pricing$: Observable<Pricing> = new Observable();
@@ -24,10 +24,20 @@ export class PricingPageComponent implements OnInit {
 	}
 
 	getPageData(database: string, id?: number) {
-		this.pricing$ = this.config.getSettings(database, id);
+		this.pricing$ = this.config.getSettings(database, id).pipe(
+			catchError(error => {
+				console.error('Error fetching feature data:', error);
+				return throwError(error);
+			})
+		);
 	}
 
 	getBlockData(database: string) {
-		this.plans$ = this.config.getSettings(database);
+		this.plans$ = this.config.getSettings(database).pipe(
+			catchError(error => {
+				console.error('Error fetching feature data:', error);
+				return throwError(error);
+			})
+		);
 	}
 }

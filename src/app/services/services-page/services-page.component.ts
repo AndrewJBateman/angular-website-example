@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable, throwError, catchError } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../shared/services/config.service';
 import { Service } from '../models/service.model';
@@ -20,6 +20,11 @@ export class ServicesPageComponent implements OnInit {
 	}
 
 	getPageData(database: string, id?: number) {
-		this.services$ = this.config.getSettings(database, id);
+		this.services$ = this.config.getSettings(database, id).pipe(
+			catchError(error => {
+				console.error('Error fetching feature data:', error);
+				return throwError(error);
+			})
+		);
 	}
 }

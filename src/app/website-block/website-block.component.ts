@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-website-block',
-    templateUrl: './website-block.component.html',
-    standalone: true,
+	selector: 'app-website-block',
+	templateUrl: './website-block.component.html',
+	standalone: true,
 })
 export class WebsiteBlockComponent {
 	@Input() website: {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError, catchError } from 'rxjs';
 import { ConfigService } from 'src/app/shared/services/config.service';
 import { Client } from '../models/client.model';
 import { Company } from '../models/company.model';
@@ -23,10 +23,20 @@ export class ClientsPageComponent implements OnInit {
 	}
 
 	getPageData(database: string, id?: number) {
-		this.clients$ = this.config.getSettings(database, id);
+		this.clients$ = this.config.getSettings(database, id).pipe(
+			catchError(error => {
+				console.error('Error fetching feature data:', error);
+				return throwError(error);
+			})
+		);
 	}
 
 	getBlockData(database: string) {
-		this.companies$ = this.config.getSettings(database);
+		this.companies$ = this.config.getSettings(database).pipe(
+			catchError(error => {
+				console.error('Error fetching feature data:', error);
+				return throwError(error);
+			})
+		);
 	}
 }

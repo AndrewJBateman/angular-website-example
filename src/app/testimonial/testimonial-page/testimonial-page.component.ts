@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable, throwError, catchError } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../shared/services/config.service';
 import { Feedback } from '../models/feedback.model';
@@ -7,10 +7,10 @@ import { AsyncPipe } from '@angular/common';
 import { FeedbackBlockComponent } from '../feedback-block/feedback-block.component';
 
 @Component({
-    selector: 'app-testimonial-page',
-    templateUrl: './testimonial-page.component.html',
-    standalone: true,
-    imports: [FeedbackBlockComponent, AsyncPipe],
+	selector: 'app-testimonial-page',
+	templateUrl: './testimonial-page.component.html',
+	standalone: true,
+	imports: [FeedbackBlockComponent, AsyncPipe],
 })
 export class TestimonialPageComponent implements OnInit {
 	testimonials$: Observable<Testimonial[]> = new Observable();
@@ -24,10 +24,20 @@ export class TestimonialPageComponent implements OnInit {
 	}
 
 	getPageData(database: string, id?: number) {
-		this.testimonials$ = this.config.getSettings(database, id);
+		this.testimonials$ = this.config.getSettings(database, id).pipe(
+			catchError(error => {
+				console.error('Error fetching feature data:', error);
+				return throwError(error);
+			})
+		);
 	}
 
 	getBlockData(database: string) {
-		this.feedback$ = this.config.getSettings(database);
+		this.feedback$ = this.config.getSettings(database).pipe(
+			catchError(error => {
+				console.error('Error fetching feature data:', error);
+				return throwError(error);
+			})
+		);
 	}
 }
