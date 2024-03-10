@@ -1,21 +1,21 @@
 <aside
-  id="testimonials"
-  class="scrollto text-center pull-right pull-left"
-  data-enllax-ratio=".2">
-  <div class="row clearfix">
-    @if (testimonials$ | async; as testimonials) {
-      <div class="section-heading">
-        <h3 class="pull-down">{{ testimonials.tagline }}</h3>
-        <h2 class="section-title">{{ testimonials.title }}</h2>
-      </div>
-    }
+	id="testimonials"
+	class="scrollto text-center pull-right pull-left"
+	data-enllax-ratio=".2">
+	<div class="row clearfix">
+		@if (testimonials$ | async; as testimonial) {
+			<div class="section-heading">
+				<h3 class="pull-down">{{ testimonial.tagline }}</h3>
+				<h2 class="section-title">{{ testimonial.title }}</h2>
+			</div>
+		}
 
-    <!--User Testimonial-->
-    @for (feedback of feedback$ | async; track feedback; let i = $index) {
-      <div>
-        <app-feedback-block [feedback]="feedback"></app-feedback-block>
-      </div>
-    }
-    <!-- End of Testimonial-->
-  </div>
+		<!--User Testimonial-->
+		@for (feedback of feedback$ | async; track feedback; let i = $index) {
+			<div>
+				<app-feedback-block [feedback]="feedback"></app-feedback-block>
+			</div>
+		}
+		<!-- End of Testimonial-->
+	</div>
 </aside>

@@ -1,11 +1,11 @@
 <section id="gallery" class="introduction scrollto text-center">
-  <div class="row clearfix">
-    <aside id="gallery" class="row text-center scrollto clearfix">
-      @for (image of images$ | async; track image; let i = $index) {
-        <div>
-          <app-image-block [image]="image"></app-image-block>
-        </div>
-      }
-    </aside>
-  </div>
+	<div class="row clearfix">
+		<aside id="gallery" class="row text-center scrollto clearfix">
+			@for (image of images$ | async; track image; let i = $index) {
+				<div>
+					<app-image-block [image]="image"></app-image-block>
+				</div>
+			}
+		</aside>
+	</div>
 </section>
