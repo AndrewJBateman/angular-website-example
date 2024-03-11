@@ -13,8 +13,8 @@ import { FeatureBlockComponent } from '../feature-block/feature-block.component'
 	imports: [FeatureBlockComponent, AsyncPipe],
 })
 export class AboutPageComponent implements OnInit {
-	intro$: Observable<Intro> = new Observable();
-	features$: Observable<Feature[]> = new Observable();
+	intro$: Observable<Intro>;
+	features$: Observable<Feature[]>;
 
 	constructor(private config: ConfigService) {}
 
