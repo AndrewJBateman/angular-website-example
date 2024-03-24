@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { configuration } from './configuration';
 import { Observable, of } from 'rxjs';
@@ -8,8 +9,8 @@ import { catchError } from 'rxjs/operators';
 	providedIn: 'root',
 })
 export class ConfigService {
-	config = configuration;
-	apiUrl = 'api/posts';
+	readonly config = configuration;
+	readonly apiUrl = 'api/posts';
 
 	constructor(private http: HttpClient) {}
 

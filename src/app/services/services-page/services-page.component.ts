@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Observable, throwError, catchError } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../../shared/services/config.service';
